@@ -6,7 +6,7 @@
 
         <form method="get">
             <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
+                <div class="col-xl-4 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
                     <label class="control-label" for="y">{{ trans('global.year') }}</label>
                     <select name="y" id="y" class="form-control">
                         @foreach(array_combine(range(date("Y"), 1900), range(date("Y"), 1900)) as $year)
@@ -16,7 +16,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
+                <div class="col-xl-4 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
                     <label class="control-label" for="m">{{ trans('global.month') }}</label>
                     <select name="m" for="m" class="form-control">
                         @foreach(cal_info(0)['months'] as $month)
