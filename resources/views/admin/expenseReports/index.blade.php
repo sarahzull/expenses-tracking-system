@@ -6,7 +6,7 @@
 
         <form method="get">
             <div class="row">
-                <div class="col-3 form-group">
+                <div class="col-xl-3 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
                     <label class="control-label" for="y">{{ trans('global.year') }}</label>
                     <select name="y" id="y" class="form-control">
                         @foreach(array_combine(range(date("Y"), 1900), range(date("Y"), 1900)) as $year)
@@ -16,7 +16,7 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-3 form-group">
+                <div class="col-xl-3 col-lg-6 col-md-9 col-sm-12 col-xs-15 form-group">
                     <label class="control-label" for="m">{{ trans('global.month') }}</label>
                     <select name="m" for="m" class="form-control">
                         @foreach(cal_info(0)['months'] as $month)
@@ -26,7 +26,8 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="col-4">
+                
+                <div class="col-auto form-group">
                     <label class="control-label">&nbsp;</label><br>
                     <button class="btn btn-primary" type="submit">{{ trans('global.filterDate') }}</button>
                 </div>
@@ -37,13 +38,16 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.expenseReport.reports.incomeReport') }}
+        <div class="row">
+        <div class="col-auto mr-auto">{{ trans('cruds.expenseReport.reports.incomeReport') }} </div>
+        <div class="col-auto ml-auto"><a href="{{ route('admin.monthlyreports.pdf') }}" target="_blank" class="btn btn-xs btn-default">{{ trans('global.pdfExport') }}</a></div>
+        </div>
     </div>
 
     <div class="card-body">
         <div class="row">
-            <div class="col">
-                <table class="table table-bordered table-striped">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <table class="table table-bordered table-striped table-fixed">
                     <tr>
                         <th>{{ trans('cruds.expenseReport.reports.income') }}</th>
                         <td>{{ number_format($incomesTotal, 2) }}</td>
@@ -58,7 +62,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>{{ trans('cruds.expenseReport.reports.incomeByCategory') }}</th>
@@ -72,7 +76,7 @@
                     @endforeach
                 </table>
             </div>
-            <div class="col">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>{{ trans('cruds.expenseReport.reports.expenseByCategory') }}</th>

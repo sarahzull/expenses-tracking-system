@@ -22,6 +22,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css" rel="stylesheet" />
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" />
     @yield('styles')
 </head>
 
@@ -33,13 +34,16 @@
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <a class="c-header-brand d-lg-none" href="#">{{ trans('panel.site_title') }}</a>
+            <a class="c-header-brand d-lg-none" href="#">
+              <img src="{{url('/assets/transparent.svg')}}" alt="" width="85" height="55" alt="{{ trans('panel.site_title') }}">
+            </a>
+            {{-- <a class="c-header-brand d-lg-none" href="#">{{ trans('panel.site_title') }}</a> --}}
 
             <button class="c-header-toggler mfs-3 d-md-down-none" type="button" responsive="true">
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <ul class="c-header-nav ml-auto">
+            <ul class="c-header-nav mx-4 ml-auto">
                 @if(count(config('panel.available_languages', [])) > 1)
                     <li class="c-header-nav-item dropdown d-md-down-none">
                         <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -56,7 +60,7 @@
                 <ul class="c-header-nav ml-auto">
                     <li class="c-header-nav-item dropdown notifications-menu">
                         <a href="#" class="c-header-nav-link" data-toggle="dropdown">
-                            <i class="far fa-bell"></i>
+                            <i class="fas fa-bell" style="color: #fff;"></i>
                             @php($alertsCount = \Auth::user()->userUserAlerts()->where('read', false)->count())
                                 @if($alertsCount > 0)
                                     <span class="badge badge-warning navbar-badge">
@@ -82,6 +86,16 @@
                             @endif
                         </div>
                     </li>
+                    <li class="c-header-nav-item">
+                      @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+                            @can('profile_password_edit')
+                                    <a class="c-header-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
+                                        <i class="fas fa-user c-sidebar-nav-icon" style="color: #fff;"></i>
+                                    </a>
+                            @endcan
+                        @endif
+                    </li>
+
                 </ul>
 
             </ul>
@@ -141,7 +155,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
-    <script>
+    <script> //dataTable Copy,CSV,Excel,Print..
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
   let csvButtonTrans = '{{ trans('global.datatables.csv') }}'

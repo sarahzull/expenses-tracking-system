@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Recursive:wght@400;700&display=swap');
+
+:root {
+    --primary: #807FC0;
+    --primary-hover: #66669A;
+}
+
+body {
+    --transition-delay: 1s;
+    font-family: 'Inter';
+}
+
+/* for dark mode */
+body.dark {
+    --background-color: #181924;
+}
+
+a ,
+a.page-link{
+    color: #655CB8;
+}
+
+a.page-link:hover{
+    color: #4757B8;
+}
+
 .ck-editor__editable,
 textarea {
     min-height: 150px;
@@ -48,8 +74,23 @@ table.dataTable thead th {
     width: 100% !important;
 }
 
+.select2-search__field {
+    border: 1px solid #ccc;
+    outline-style: none !important;
+    border-radius: 4px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #807FC0;
+    color: white;
+}
+
 .select2-selection__rendered {
     padding-bottom: 5px !important;
+}
+
+.select2-results__option {
+    padding: 6px 20px 6px 20px !important;
 }
 
 .has-error .invalid-feedback {
@@ -96,6 +137,31 @@ table.dataTable thead .sorting_desc {
     border-radius: 3px;
 }
 
+.btn-primary {
+    background-color: #807FC0;
+    border-color: #807FBA;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #66669A;
+    border-color: #66669A;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #807FC0;
+    border-color: #807FBA;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #807FC0;
+    border-color: #807FBA;
+}
+
 .searchable-title {
     font-weight: bold;
 }
@@ -123,10 +189,52 @@ table.dataTable thead .sorting_desc {
     display: block;
 }
 
+.c-sidebar {
+    color: #fff;
+    background: #2A2B36;
+}
+
 .c-sidebar-brand .c-sidebar-brand-full:hover {
     color: inherit;
 }
 
+.c-sidebar .c-sidebar-nav-link:hover,
+.c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+    color: #fff;
+    background: #807FC0;
+}
+
 .custom-select.form-control-sm {
     padding: 0.25rem 1.5rem;
+}
+
+.c-header{
+    background: #2a2b36;
+    /* color: rgba(255, 255, 255, 0.75); */
+    --cui-header-hover-color: rgba(255, 255, 255, 0.9);
+    --cui-header-active-color: #fff;
+    --cui-header-disabled-color: rgba(255, 255, 255, 0.25);
+    --cui-header-brand-color: #fff;
+    --cui-header-brand-hover-color: #fff;
+    --cui-header-toggler-border-color: rgba(255, 255, 255, 0.1);
+    --cui-header-divider-border-color: rgba(255, 255, 255, 0.1);
+    border-bottom: none !important;
+}
+
+.c-header .c-header-toggler{
+    color: rgba(255, 255, 255, 0.75);
+    /* border-color: rgba(255, 255, 255, 0.1); */
+    
+}
+
+.c-header-brand d-lg-none {
+    color: #fff;
+}
+
+.c-header .c-header-brand:focus, .c-header .c-header-brand:hover {
+    color: #807FC0;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 2px solid #d8dbe0;
 }

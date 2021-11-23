@@ -2,7 +2,7 @@
 
     <div class="c-sidebar-brand d-md-down-none">
         <a class="c-sidebar-brand-full h4" href="#">
-            {{ trans('panel.site_title') }}
+            <img src="{{url('/assets/transparent.svg')}}" class="sidebar-brand-full" width="118" height="46" alt="logo">
         </a>
     </div>
 
@@ -60,7 +60,7 @@
         @can('category_access')
             <li class="c-sidebar-nav-dropdown {{ request()->is("admin/expense-categories*") ? "c-show" : "" }} {{ request()->is("admin/income-categories*") ? "c-show" : "" }} {{ request()->is("admin/budget-categories*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
-                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+                    <i class="fas fa-list-ul c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.category.title') }}
@@ -69,7 +69,7 @@
                     @can('expense_category_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.expense-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/expense-categories") || request()->is("admin/expense-categories/*") ? "c-active" : "" }}">
-                                <i class="fa-fw fas fa-list c-sidebar-nav-icon">
+                                <i class="fas fa-angle-double-right c-sidebar-nav-icon">
 
                                 </i>
                                 {{ trans('cruds.expenseCategory.title') }}
@@ -79,7 +79,7 @@
                     @can('income_category_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.income-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/income-categories") || request()->is("admin/income-categories/*") ? "c-active" : "" }}">
-                                <i class="fa-fw fas fa-list c-sidebar-nav-icon">
+                                <i class="fas fa-angle-double-right c-sidebar-nav-icon">
 
                                 </i>
                                 {{ trans('cruds.incomeCategory.title') }}
@@ -89,7 +89,7 @@
                     @can('budget_category_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.budget-categories.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/budget-categories") || request()->is("admin/budget-categories/*") ? "c-active" : "" }}">
-                                <i class="fa-fw fas fa-list c-sidebar-nav-icon">
+                                <i class="fas fa-angle-double-right c-sidebar-nav-icon">
 
                                 </i>
                                 {{ trans('cruds.budgetCategory.title') }}
@@ -102,7 +102,7 @@
         @can('budget_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.budgets.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/budgets") || request()->is("admin/budgets/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-arrow-circle-right c-sidebar-nav-icon">
+                    <i class="fas fa-calculator c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.budget.title') }}
@@ -112,7 +112,7 @@
         @can('expense_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.expenses.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/expenses") || request()->is("admin/expenses/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-arrow-circle-right c-sidebar-nav-icon">
+                    <i class="fas fa-dollar-sign c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.expense.title') }}
@@ -122,7 +122,7 @@
         @can('income_access')
             <li class="c-sidebar-nav-item">
                 <a href="{{ route("admin.incomes.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/incomes") || request()->is("admin/incomes/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-arrow-circle-right c-sidebar-nav-icon">
+                    <i class="fas fa-money-bill c-sidebar-nav-icon">
 
                     </i>
                     {{ trans('cruds.income.title') }}
@@ -149,17 +149,17 @@
                 </a>
             </li>
         @endcan
-        @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
+        {{-- @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
             @can('profile_password_edit')
                 <li class="c-sidebar-nav-item">
                     <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
-                        <i class="fa-fw fas fa-key c-sidebar-nav-icon">
+                        <i class="fas fa-user c-sidebar-nav-icon">
                         </i>
                         {{ trans('global.change_password') }}
                     </a>
                 </li>
             @endcan
-        @endif
+        @endif --}}
         <li class="c-sidebar-nav-item">
             <a href="#" class="c-sidebar-nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
                 <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">

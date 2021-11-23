@@ -11,7 +11,7 @@ Route::get('/home', function () {
 
 Auth::routes();
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
+Route::group(['as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
     // Permissions
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
@@ -49,6 +49,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Expense Report
     Route::delete('expense-reports/destroy', 'ExpenseReportController@massDestroy')->name('expense-reports.massDestroy');
     Route::resource('expense-reports', 'ExpenseReportController');
+    Route::get('expenses-reports/pdf', 'ExpenseReportController@createPDF')->name('monthlyreports.pdf');
 
     // Budget Categories
     Route::delete('budget-categories/destroy', 'BudgetCategoriesController@massDestroy')->name('budget-categories.massDestroy');

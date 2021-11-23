@@ -7,6 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <style>
+    .card {
+        border-radius: 0.5rem !important;
+    }
+    .card-header {
+        background-color: #F5F5F5 !important
+    }
+    </style>
+
     <title>{{ trans('panel.site_title') }}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://unpkg.com/@coreui/coreui@3.2/dist/css/coreui.min.css" rel="stylesheet" />
@@ -28,6 +37,7 @@
         </div>
     </div>
     @yield('scripts')
+    @include('partials.footer')
 </body>
 
 </html>
