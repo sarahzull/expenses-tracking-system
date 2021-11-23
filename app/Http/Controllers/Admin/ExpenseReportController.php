@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Expense;
 use App\Models\Income;
 use Carbon\Carbon;
-use \PDF;
+use PDF;
 
 class ExpenseReportController extends Controller
 {
@@ -116,16 +116,12 @@ class ExpenseReportController extends Controller
             }
         }
 
-        // share data to view
-        // view()->share('expense',$expense);
-        // view()->share('income',$income);
-        $pdf = PDF::loadView('admin.expenseReports.printpdf', compact('expensesSummary',
+        $pdf = PDF::loadView('admin.expenseReports.printpdf',compact('expensesSummary',
         'incomesSummary',
         'expensesTotal',
         'incomesTotal',
-        'profit'))->setPaper('a4', 'landscape');
+        'profit'))->setPaper('landscape');
   
-        // download PDF file with download method
         return $pdf->stream('monthlyreports.pdf');
       }
 }
