@@ -2,7 +2,7 @@
 
     <div class="c-sidebar-brand d-md-down-none">
         <a class="c-sidebar-brand-full h4" href="#">
-            <img src="{{url('/assets/transparent.svg')}}" class="sidebar-brand-full" width="118" height="46" alt="logo">
+            <img src="{{ asset('/assets/transparent.svg') }}" class="sidebar-brand-full" width="118" height="46" alt="logo">
         </a>
     </div>
 
