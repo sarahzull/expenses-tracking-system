@@ -3,8 +3,10 @@
 <div class="row justify-content-center">
     <div class="col-md-6">
         <div class="card mx-4">
+            <div class="card-header text-center">
+                <h3 class="pt-2">{{ trans('panel.site_title') }}</h3>
+            </div>
             <div class="card-body p-4">
-                <h1>{{ trans('panel.site_title') }}</h1>
 
                 <p class="text-muted">{{ trans('global.reset_password') }}</p>
 
@@ -35,6 +37,10 @@
                         </div>
                     </div>
                 </form>
+                <div class="mt-3 text-right">
+                    <a href="{{ route('login') }}">
+                        {{ trans('global.remember_password') }}
+                    </a>
             </div>
         </div>
     </div>
