@@ -15,6 +15,10 @@ body.dark {
     --background-color: #181924;
 }
 
+.bg-primary {
+    background-color: #4757B8 !important;
+}
+
 a ,
 a.page-link{
     color: #655CB8;
