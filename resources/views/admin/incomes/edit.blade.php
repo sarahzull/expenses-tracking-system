@@ -36,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label class="required" for="amount">{{ trans('cruds.income.fields.amount') }}</label>
-                <input class="form-control {{ $errors->has('amount') ? 'is-invalid' : '' }}" type="number" name="amount" id="amount" value="{{ old('amount', $income->amount) }}" step="0.01" required>
+                <input class="form-control {{ $errors->has('amount') ? 'is-invalid' : '' }}" type="number" name="amount" id="amount" value="{{ old('amount', $income->amount) }}" step="0.01" min="1" required>
                 @if($errors->has('amount'))
                     <div class="invalid-feedback">
                         {{ $errors->first('amount') }}
