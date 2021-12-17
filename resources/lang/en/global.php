@@ -142,7 +142,7 @@ return [
     'edit_profile'                         => 'Profile',
     'change_password'                      => 'Change password',
     'delete_account'                       => 'Delete account',
-    'delete_account_warning'               => 'Enter your email address to confirm you want to delete account.\nThis action is not reversible.',
+    'delete_account_warning'               => 'Enter your email address to confirm you want to delete account.\nYou are advisable to download all your data. \nThis action is not reversible.',
     'two_factor'                           => [
         'title'          => 'Two factor authentication',
         'sub_title'      => 'Two factor authentication code has been sent via email. Code is valid for :minutes minutes. If you haven\'t received it, press resend.',
