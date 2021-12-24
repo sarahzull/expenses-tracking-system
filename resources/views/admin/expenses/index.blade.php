@@ -26,7 +26,7 @@
                             {{ trans('cruds.expense.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.expense.fields.expense_category') }}
+                            {{ trans('cruds.expense.fields.description') }}
                         </th>
                         <th>
                             {{ trans('cruds.expense.fields.entry_date') }}
@@ -35,7 +35,7 @@
                             {{ trans('cruds.expense.fields.amount') }}
                         </th>
                         <th>
-                            {{ trans('cruds.expense.fields.description') }}
+                            {{ trans('cruds.expense.fields.expense_category') }}
                         </th>
                         <th>
                             &nbsp;
@@ -52,7 +52,7 @@
                                 {{ $expense->id ?? '' }}
                             </td>
                             <td>
-                                {{ $expense->expense_category->name ?? '' }}
+                                {{ $expense->description ?? '' }}
                             </td>
                             <td>
                                 {{ $expense->entry_date ?? '' }}
@@ -61,7 +61,7 @@
                                 {{ $expense->amount ?? '' }}
                             </td>
                             <td>
-                                {{ $expense->description ?? '' }}
+                                {{ $expense->expense_category->name ?? '' }}
                             </td>
                             <td>
                                 @can('expense_show')
@@ -134,6 +134,7 @@
 
   $.extend(true, $.fn.dataTable.defaults, {
     orderCellsTop: true,
+    ordering: false,
     order: [[ 1, 'asc' ]],
     pageLength: 100,
   });
