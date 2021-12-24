@@ -25,10 +25,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.expense.fields.expense_category') }}
+                            {{ trans('cruds.expense.fields.description') }}
                         </th>
                         <td>
-                            {{ $expense->expense_category->name ?? '' }}
+                            {{ $expense->description }}
                         </td>
                     </tr>
                     <tr>
@@ -49,10 +49,10 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.expense.fields.description') }}
+                            {{ trans('cruds.expense.fields.expense_category') }}
                         </th>
                         <td>
-                            {{ $expense->description }}
+                            {{ $expense->expense_category->name ?? '' }}
                         </td>
                     </tr>
                 </tbody>
