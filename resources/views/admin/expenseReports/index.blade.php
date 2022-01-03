@@ -57,7 +57,7 @@
                         <td>{{ number_format($expensesTotal, 2) }}</td>
                     </tr>
                     <tr>
-                        <th>{{ trans('cruds.expenseReport.reports.profit') }}</th>
+                        <th>{{ trans('cruds.expenseReport.reports.balance') }}</th>
                         <td>{{ number_format($profit, 2) }}</td>
                     </tr>
                 </table>

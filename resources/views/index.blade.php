@@ -60,7 +60,7 @@
               <div class="col-12 col-md-5 col-lg-6 order-md-2">
                   <!-- Image -->
                   <figure class="w-100">
-                      <img alt="Image placeholder" src="{{ asset('/assets/illustration.svg') }}" class="img-fluid mw-md-120">
+                      <img alt="Image placeholder" src="{{ asset('/assets/illustration-3.svg') }}" class="img-fluid mw-md-120">
                   </figure>
               </div>
               <div class="col-12 col-md-7 col-lg-6 order-md-1 pr-md-5">
