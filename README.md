@@ -1,3 +1,3 @@
-## Final Year Project Diploma in Computer Science
+## Final Year Project for Diploma in Computer Science
 
 ### Expenses Tracking System
