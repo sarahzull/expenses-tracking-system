@@ -76,3 +76,7 @@ Route::get('/offline', function () {
 Route::get('/index', function () {
     return view('index');
 });
+
+Route::get('/email', function () {
+    return view('email.welcome');
+});

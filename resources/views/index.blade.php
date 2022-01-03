@@ -32,7 +32,7 @@
         <div class="container">
             <!-- Brand -->
             <a class="navbar-brand" href="index.html">
-                <img alt="Image placeholder" src="{{ asset('/assets/transparent.svg') }}" id="navbar-logo" style="width:20%;">
+                <img alt="logo" src="{{ asset('/assets/transparent.svg') }}" id="navbar-logo" style="width:20%;">
             </a>
             <!-- Toggler -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
