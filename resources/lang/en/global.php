@@ -16,7 +16,7 @@ return [
     'emailVerificationSuccess'       => 'User email verified successfully',
     'entries'                        => 'Entries',
     'filterDate'                     => 'Filter by date',
-    'forgot_password'                => 'Forgot your password?',
+    'forgot_password'                => 'Forgot password?',
     'remember_password'              => 'Remember your password?',
     'home'                           => 'Home',
     'list'                           => 'List',

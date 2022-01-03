@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "laraveldaily/laravel-charts": "^0.1.24",
+        "silviolleite/laravelpwa": "^2.0",
         "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {
