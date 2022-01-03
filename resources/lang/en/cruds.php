@@ -185,6 +185,7 @@ return [
             'income'            => 'Income',
             'expense'           => 'Expense',
             'profit'            => 'Profit',
+            'balance'           => 'Balance',
         ],
     ],
     'budgetCategory' => [
