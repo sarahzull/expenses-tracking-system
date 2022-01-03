@@ -68,10 +68,6 @@
                   <h1 class="display-4 text-center text-md-left mb-3">
                     Experience a fresh way to <strong class="text-bold"><b>manage money</b></strong>
                   </h1>
-                  {{-- <!-- Text -->
-                  <p class="lead text-center text-md-left text-muted">
-                      Build a beautiful, modern website with flexible Bootstrap components built from scratch.
-                  </p> --}}
                   <!-- Buttons -->
                   <div class="text-center text-md-left mt-5">
                       <a href="/register" class="btn btn-primary btn-icon">
