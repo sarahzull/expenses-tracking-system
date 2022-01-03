@@ -1,6 +1,6 @@
 ## Final Year Project for Diploma in Computer Science
 
-### Expenses Tracking System
+### Expenses Tracking System by Siti Nursarah
 
 
 |               | Email             | Password |
