@@ -72,3 +72,7 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
 Route::get('/offline', function () {
     return view('vendor.laravelpwa.offline');
 });
+
+Route::get('/index', function () {
+    return view('index');
+});
