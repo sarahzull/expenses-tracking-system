@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-light dark">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/index">
                 <img alt="logo" src="{{ asset('/assets/transparent.svg') }}" id="navbar-logo" style="width:20%;">
             </a>
             <!-- Toggler -->
