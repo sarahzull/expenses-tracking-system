@@ -1,6 +1,6 @@
 ## Final Year Project for Diploma in Computer Science
 
-[LIVE DEMO](https://nursarahweb.com).
+[LIVE DEMO](https://nursarahweb.com)
 
 ### Expenses Tracking System by Siti Nursarah
 
